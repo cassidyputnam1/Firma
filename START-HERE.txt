@@ -1,0 +1,44 @@
+TADAN-INSPIRED VIDEO HOMEPAGE
+
+YOUR FILES
+  index.html      Ready-to-publish homepage
+  background.mp4  YOUR VIDEO IS INCLUDED and ready to play
+
+PERSONALIZE
+1. Open index.html in a plain-text editor.
+2. Replace YOUR NAME (both page title and visible heading).
+3. Replace hello@example.com in both the mailto link and visible text.
+4. Replace yourusername in the Instagram URL.
+5. Optionally replace 'Creative practice / Los Angeles' or delete that line.
+6. Save.
+
+YOUR VIDEO IS ALREADY INCLUDED
+The supplied background.mp4 is in the same folder as index.html.
+To replace it later, upload a new MP4 with the same filename.
+
+PUBLISH WITH GITHUB PAGES
+1. Make a free account at github.com.
+2. Create a NEW PUBLIC repository, e.g. portfolio-home.
+3. Choose 'uploading an existing file' or Add file > Upload files.
+4. Upload index.html and background.mp4. Commit changes.
+   Tip: Large video files above GitHub's browser-upload limit (~25 MB) need compression.
+5. Open your repository Settings > Pages.
+6. Under Build and deployment, choose Deploy from a branch, main, /(root), Save.
+7. After GitHub publishes, try https://YOURUSERNAME.github.io/portfolio-home/
+
+CONNECT YOUR ALREADY-OWNED DOMAIN
+1. In the same repository Settings > Pages > Custom domain, enter example.com (replace with your actual domain), Save.
+2. At the company where you manage DNS, set the ROOT (@) A records to:
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+3. Add a CNAME record: name www; value YOURUSERNAME.github.io (NOT repository name).
+4. Remove any old CONFLICTING @ A records or www CNAME records that send traffic to a previous site. Keep email-related MX/TXT records.
+5. Wait for DNS and HTTPS provisioning, then turn on Enforce HTTPS in Settings > Pages when available.
+6. Test both example.com and www.example.com.
+
+Notes: GitHub Pages is free for public repositories, domain registration renewals still cost whatever your registrar charges. Your uploaded source code and video are public. Autoplay generally requires muted video; reduced-motion preference hides video and shows fallback background.
+
+Official instructions:
+https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
