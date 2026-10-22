@@ -1,5 +1,1 @@
-GIFFHORN PUTNAM website
-
-All files are ready for GitHub Pages. Upload the individual files in this folder to the ROOT of your existing GitHub repository (where index.html lives), then commit changes. Replace index.html and retain both .ttf files alongside it. Keep OFL.txt as the font license. Do not upload the ZIP itself.
-
-The exact Cossette Titre fonts are served locally from the included TTF files, not Google Fonts. Your background video is background.mp4.
+Upload index.html and both CossetteTitre-*-v3.ttf files to the ROOT of your Github Firma repository. Your existing background.mp4 can stay. For a full reinstall upload all files from this folder (not the folder itself). Then hard refresh. Font is embedded using @font-face with v3 filenames to bypass old caches.
