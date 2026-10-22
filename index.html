@@ -4,47 +4,73 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#181818">
-  <meta name="description" content="Creative practice and selected work.">
-  <title>YOUR NAME</title>
+  <meta name="description" content="GRIFFHORN PUTNAM">
+  <title>GRIFFHORN PUTNAM</title>
   <style>
-    :root { --text: #fff; --edge: clamp(18px, 3vw, 48px); }
+    /* To use the exact Cossette Titre font, add your licensed font file
+       named cossette-titre.woff2 next to index.html. */
+    @font-face {
+      font-family: "Cossette Titre";
+      src: url("cossette-titre.woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root { --text: #fff; --edge: clamp(20px, 3.1vw, 54px); }
     * { box-sizing: border-box; }
-    html, body { width: 100%; min-height: 100%; margin: 0; }
-    body { font-family: Arial, Helvetica, sans-serif; background: #181818; color: var(--text); }
-    .video-background { position: fixed; inset: 0; overflow: hidden; z-index: -2; background: linear-gradient(125deg,#292421,#6c5b53 55%,#302d2c); }
-    .video-background video { height: 100%; width: 100%; object-fit: cover; object-position: center; display: block; }
-    .shade { position: fixed; inset: 0; background: rgba(0,0,0,.15); z-index: -1; pointer-events: none; }
-    .page { display: flex; flex-direction: column; justify-content: space-between; min-height: 100svh; padding: var(--edge); }
-    .brand { margin: 0; font-size: clamp(24px, 4.2vw, 66px); line-height: .95; font-weight: 500; letter-spacing: -.055em; text-transform: uppercase; }
-    .bottom { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; font-size: clamp(13px, 1.2vw, 17px); line-height: 1.45; }
+    html, body { margin: 0; width: 100%; min-height: 100%; }
+    body { background: #181818; color: var(--text); font-family: "Cossette Titre", "Arial Narrow", "Helvetica Neue", Arial, sans-serif; }
+    .video-background { position: fixed; inset: 0; overflow: hidden; z-index: -2; background: #293541; }
+    .video-background video { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .shade { position: fixed; inset: 0; background: rgba(0,0,0,.08); z-index: -1; pointer-events: none; }
+    .page { min-height: 100svh; display: flex; flex-direction: column; justify-content: space-between; padding: 0 0 var(--edge); }
+    .ticker { padding: clamp(48px, 5vw, 84px) 0 0; overflow: hidden; white-space: nowrap; width: 100%; }
+    .ticker-track { display: flex; width: max-content; animation: travel-right 27s linear infinite; will-change: transform; }
+    .ticker-group { display: flex; flex: none; align-items: center; }
+    .ticker-name { font-size: clamp(24px, 2.05vw, 38px); font-weight: 400; line-height: 1.08; letter-spacing: -.025em; padding-right: clamp(48px, 6vw, 108px); }
+    /* Starts shifted one group's width left and moves right without a jump. */
+    @keyframes travel-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+    .bottom { padding: 0 var(--edge); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; font-size: clamp(15px, 1.35vw, 21px); line-height: 1.3; }
     .contact { display: flex; flex-direction: column; align-items: flex-start; }
-    a { color: inherit; text-decoration: none; text-underline-offset: .22em; }
+    a { color: inherit; text-decoration: none; text-underline-offset: .2em; }
     a:hover, a:focus-visible { text-decoration: underline; }
     .side-note { text-align: right; }
-    @media(max-width:600px) { .page { padding: 22px; } .brand { font-size: clamp(32px, 9vw, 54px); } .bottom { align-items: flex-start; flex-direction: column; gap: 14px; } .side-note { text-align: left; } }
-    @media(prefers-reduced-motion:reduce) { .video-background video { display:none; } }
+    @media(max-width:600px) {
+      .ticker { padding-top: 44px; }
+      .ticker-name { font-size: 27px; padding-right: 48px; }
+      .bottom { align-items: flex-start; flex-direction: column; gap: 14px; }
+      .side-note { text-align: left; }
+    }
+    @media(prefers-reduced-motion: reduce) {
+      .ticker-track { animation: none; transform: none; }
+      .video-background video { display: none; }
+    }
   </style>
 </head>
 <body>
   <div class="video-background" aria-hidden="true">
-    <!-- Your included background video plays automatically. -->
     <video autoplay muted loop playsinline preload="metadata">
       <source src="background.mp4" type="video/mp4">
     </video>
   </div>
   <div class="shade" aria-hidden="true"></div>
   <main class="page">
-    <!-- CHANGE THIS: Your name, brand, or studio title -->
-    <h1 class="brand">YOUR NAME</h1>
-
+    <header class="ticker" aria-label="GRIFFHORN PUTNAM">
+      <div class="ticker-track" aria-hidden="true">
+        <div class="ticker-group">
+          <span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span>
+        </div>
+        <div class="ticker-group">
+          <span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span><span class="ticker-name">GRIFFHORN PUTNAM</span>
+        </div>
+      </div>
+    </header>
     <footer class="bottom">
       <div class="contact">
-        <!-- CHANGE THIS: Your email -->
+        <!-- Customize these links -->
         <a href="mailto:hello@example.com">hello@example.com</a>
-        <!-- CHANGE THIS: Your Instagram username and profile URL -->
         <a href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
       </div>
-      <!-- Optional label: edit it or delete this whole line -->
       <div class="side-note">Creative practice<br>Los Angeles</div>
     </footer>
   </main>
