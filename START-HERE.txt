@@ -1,16 +1,5 @@
-GRIFFHORN PUTNAM WEBSITE
+GIFFHORN PUTNAM website
 
-The original background video is already installed.
+All files are ready for GitHub Pages. Upload the individual files in this folder to the ROOT of your existing GitHub repository (where index.html lives), then commit changes. Replace index.html and retain both .ttf files alongside it. Keep OFL.txt as the font license. Do not upload the ZIP itself.
 
-FONT: The entire page is configured to use Cossette Titre. The font itself is not included because a licensed font file was not provided. Add your licensed Cossette Titre web font named cossette-titre.woff2 into this folder, next to index.html. Until you add it, your browser will show a fallback font. If your file is .otf or .ttf instead, ask ChatGPT to adjust the code or export a properly licensed .woff2 for web use.
-
-BANNER: GRIFFHORN PUTNAM repeats and continuously travels left to right. To adjust the motion speed, find 27s in index.html and change it (larger = slower).
-
-EDIT LINKS: In index.html replace hello@example.com and yourusername, and edit Creative practice / Los Angeles.
-
-PUBLISH UPDATE TO GITHUB:
-1. Open the repository containing your existing website.
-2. Upload this new index.html to its top level, replacing the old index.html.
-3. You can keep your existing background.mp4 on GitHub; it's unchanged.
-4. If using the licensed font, upload cossette-titre.woff2 to the same location.
-5. Commit changes and refresh your GitHub Pages URL after deployment.
+The exact Cossette Titre fonts are served locally from the included TTF files, not Google Fonts. Your background video is background.mp4.
